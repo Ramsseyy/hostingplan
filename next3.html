@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form In JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sidepage.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Plan Sign Up!</h1>
+
+        <form name="registration">
+            <label for="fname"></label><br>
+            <input type ="text" id="fname" name="fname" placeholder="First Name"><br>
+            <label for="lname"></label><br>
+            <input type ="text" id="lname" name="lname" placeholder="Last Name"><br>
+            <label for="email"></label><br>
+            <input type ="text" id="email" name="email" placeholder="Email"><br>
+            <label for="mnumber"></label><br>
+            <input type ="number" id="mnumber" name="mnumber" placeholder="Mobile Number"><br>
+              
+              
+
+                <p id ="discount"> Discounted Price</p>
+                <button id="click" onclick="">Checkout</button>
+    
+        </form>
+
+    </div>
+
+    <script>
+         var plan3 = {
+            name:"Ultimate",
+            price: 19.99, 
+            discountMonths: [0, 7]
+        }; 
+
+        function calcAnnual() {
+            var bestPrice = plan3.price; 
+            var currDate = new Date();
+            var thisMo = currDate.getMonth();
+            for (var i = 0; i < plan3.discountMonths.length; i++) {
+                if (plan3.discountMonths[i] === thisMo) {
+                    bestPrice = plan3.price * .8;
+                    break;}
+            }
+            return bestPrice * 12;
+            }
+
+        var annualPrice = calcAnnual();
+       
+
+        document.getElementById('discount').textContent = "Discounted Price:  " + annualPrice.toFixed(2); 
+
+       
+    </script>
+</body>
+</html>

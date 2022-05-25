@@ -1,0 +1,53 @@
+html
+{
+    background-color: #0f4168;
+}
+
+.container{
+    background-color: #293241;
+    padding: 5em;
+    width: 15vw;
+    height: 60vh;
+    margin: auto;
+    margin-top: 5%;
+    box-shadow: 0 8px 16px 10px rgba(0,0,0,0.2), 0 6px 20px 10px rgba(0,0,0,0.19);
+
+}
+
+h1{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+#fname, #lname, #email, #mnumber{
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    padding: 1em 2em;
+    margin: .5em;
+    margin-left: -2em;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color:white;
+}
+
+#discount{
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    padding: 1em 2em;
+    margin: .5em;
+    margin-left: -2em;
+    color: white;
+    text-align: center;
+}
+
+#click{
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    background-color:#ee6c4d;
+    border: none;
+    color: white;
+    padding: 1em 1em;
+    margin-top: .5em;
+    cursor: pointer;
+}
